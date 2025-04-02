@@ -1,0 +1,75 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Style */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 10px solid;
+    border-image: linear-gradient(to right, black, yellow, red);
+    border-image-slice: 1;
+}
+
+/* Heading Styles */
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
+}
+
+/* GIF Styling */
+.gif-image {
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 2s ease-in-out;
+    margin: 20px 0;
+}
+
+/* Text Description */
+.description {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Hashtags Styling */
+.hashtags {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #0066cc;
+    font-weight: bold;
+}
+
+/* WhatsApp Button */
+.share-buttons {
+    margin-top: 20px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #25d366;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128c7e;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
