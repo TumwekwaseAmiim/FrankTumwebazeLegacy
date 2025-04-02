@@ -1,130 +1,81 @@
-/* Global styles */
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fffbe6; /* Light Yellow */
-    color: #333;
-    padding: 20px;
-    margin: 0;
     text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
 }
 
-/* Header Styling */
-header {
-    background-color: #ffd700; /* Gold Yellow */
-    padding: 30px;
-    color: black;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+/* Heading Styles */
+h1 {
+    color: #2c3e50;
+    font-size: 28px;
 }
 
-/* Main Heading */
-.big-heading {
-    font-size: 42px;
-    font-weight: bold;
-    text-transform: uppercase;
-    animation: fadeIn 2s ease-out;
+/* Multi-colored Border for the Content Container */
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    border: 10px solid;
+    border-image: linear-gradient(to right, black, yellow, red);
+    border-image-slice: 1;
+    padding: 20px;
+    border-radius: 10px;
 }
 
-/* Animated Text */
-.animated-text, .animated-text-2 {
-    font-size: 22px;
-    color: black;
-    font-weight: bold;
-    margin-top: 20px;
-    animation: slideUp 2s ease-out;
+/* Left Text Styling */
+.text-left {
+    flex: 1;
+    padding-right: 20px;
+    font-size: 18px;
+    color: #333;
 }
 
-/* Image Styling */
-img {
-    width: 100%;
-    max-width: 400px;
+/* Video/GIF Styling */
+.gif-image {
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 20px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    animation: zoomIn 2s ease-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* WhatsApp Share Button */
-.whatsapp-button {
-    display: inline-block;
-    background-color: #25D366; /* WhatsApp green */
-    color: white;
-    padding: 15px 25px;
+/* Right Text Styling */
+.text-right {
+    flex: 1;
+    padding-left: 20px;
     font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 10px;
-    margin-top: 20px;
-    transition: transform 0.3s ease-in-out;
-    animation: fadeIn 3s ease-out;
+    color: #333;
 }
 
-.whatsapp-button:hover {
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    background-color: black;
+/* Share Button Styling */
+.share-buttons button {
+    background-color: #0066cc;
     color: white;
-    padding: 20px;
-    margin-top: 50px; /* Increased space */
-    font-size: 18px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.share-buttons button:hover {
+    background-color: #0057b7;
+}
+
+/* Hashtags Styling */
+.hashtags {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #0066cc;
     font-weight: bold;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideUp {
-    0% {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes zoomIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-/* Smooth Scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Mobile Responsiveness */
-@media (max-width: 600px) {
-    .big-heading {
-        font-size: 28px;
-    }
-    .animated-text, .animated-text-2 {
-        font-size: 18px;
-    }
-    .whatsapp-button {
-        font-size: 16px;
-        padding: 12px 20px;
-    }
+/* Thank You Message */
+#thank-you-message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
 }
