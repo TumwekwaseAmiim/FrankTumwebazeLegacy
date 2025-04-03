@@ -1,75 +1,89 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    background: yellow; /* Hon. Frank Tumwebaze's preferred color */
+    font-family: Arial, sans-serif;
+    color: black;
+    text-align: center;
+    overflow: hidden;
 }
 
-/* Container Style */
-.container {
-    width: 80%;
-    margin: 0 auto;
-    padding: 20px;
-    border: 10px solid;
-    border-image: linear-gradient(to right, black, yellow, red);
-    border-image-slice: 1;
+/* Floating Water Effect */
+.water {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 255, 0.2); /* Blue floating water effect */
+    animation: floatingWater 5s infinite alternate ease-in-out;
+    z-index: -1;
 }
 
-/* Heading Styles */
+@keyframes floatingWater {
+    0% { transform: translateY(-10px); }
+    100% { transform: translateY(10px); }
+}
+
+/* Floating Hearts */
+.heart {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url('heart-emoji.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0.8;
+    animation: floatUp 5s infinite ease-in;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+
+/* Campaign Content */
+.campaign-content {
+    position: relative;
+    z-index: 10;
+    margin-top: 50px;
+}
+
+/* Campaign Image */
+.campaign-content img {
+    width: 250px; /* Adjusted to a reasonable size */
+    height: auto;
+    border-radius: 15px;
+    border: 5px solid black;
+}
+
+/* Headings */
 h1 {
-    color: #2c3e50;
-    font-size: 28px;
+    font-size: 36px;
+    margin: 10px 0;
+    color: red;
 }
 
-/* GIF Styling */
-.gif-image {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    animation: fadeIn 2s ease-in-out;
-    margin: 20px 0;
-}
-
-/* Text Description */
-.description {
-    font-size: 18px;
-    margin-top: 15px;
-    color: #333;
-    font-weight: bold;
-}
-
-/* Hashtags Styling */
-.hashtags {
-    margin-top: 10px;
-    font-size: 16px;
-    color: #0066cc;
-    font-weight: bold;
-}
-
-/* WhatsApp Button */
-.share-buttons {
-    margin-top: 20px;
-}
-
-.whatsapp-button {
+/* Buttons */
+.btn {
     display: inline-block;
-    padding: 15px 30px;
-    background-color: #25d366;
+    background: green;
     color: white;
-    font-size: 16px;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: 0.3s;
 }
 
-.whatsapp-button:hover {
-    background-color: #128c7e;
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+.btn:hover {
+    background: darkgreen;
 }
